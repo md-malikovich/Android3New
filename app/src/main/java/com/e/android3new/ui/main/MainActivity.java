@@ -1,8 +1,10 @@
-package com.e.android3new;
+package com.e.android3new.ui.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.e.android3new.R;
 
 public class MainActivity extends AppCompatActivity {
 
