@@ -12,8 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.onboard.OnBoardActivity"/>
-        <activity android:name=".ui.splashscreen.SplashActivity">
+        <activity android:name=".ui.onboard.OnBoardActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".ui.splashscreen.SplashActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
