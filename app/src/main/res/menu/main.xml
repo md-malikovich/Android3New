@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/skip"
+        android:title="SKIP"
+
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_weather"
+        android:orderInCategory="100"
+        android:title="Weather"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_exchange"
+        android:orderInCategory="100"
+        android:title="Exchange"
+        app:showAsAction="never"/>
+
+</menu>
