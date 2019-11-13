@@ -44,18 +44,18 @@ public class OnBoardActivity extends AppCompatActivity {
         });
     }
 
-    private void setupViewPager() {
-        boardAdapter = new OnBoardAdapter(getResource());
-        //circleIndicator.setViewPager(viewPager); //TODO:
-        viewPager.setAdapter(boardAdapter);
-    }
-
     public void initViews() {
         btnNext = findViewById(R.id.btn_next);
         viewPager = findViewById(R.id.view_pager);
         //circleIndicator = findViewById(R.id.circle); //TODO:
         toolbar = findViewById(R.id.toolbarTransparent);
         setSupportActionBar(toolbar);
+    }
+
+    private void setupViewPager() {
+        boardAdapter = new OnBoardAdapter(getResource());
+        //circleIndicator.setViewPager(viewPager); //TODO:
+        viewPager.setAdapter(boardAdapter);
     }
 
     private ArrayList<OnBoardEntity> getResource() {
@@ -65,7 +65,7 @@ public class OnBoardActivity extends AppCompatActivity {
         list.add(new OnBoardEntity("Here you are may update!", R.drawable.update));
         list.add(new OnBoardEntity("Thanks that you are with us!", R.drawable.thankyou));
         return list;
-}
+    }
 
     public static void start(Context context) {
         context.startActivity(new Intent(context, OnBoardActivity.class));

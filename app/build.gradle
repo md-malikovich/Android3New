@@ -10,6 +10,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String","WEATHER_KEY", "\"${weather_key}\""
+        buildConfigField "String","WEATHER_BASE_URL", "\"${base_url_weather}\""
     }
     buildTypes {
         release {
@@ -27,13 +29,14 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     androidTestImplementation 'androidx.test:runner:1.2.0'
-
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'com.romandanylyk:pageindicatorview:1.0.3'
     implementation 'com.squareup.retrofit2:retrofit:2.6.2'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
     implementation 'com.squareup.okhttp3:okhttp:4.2.2'
     implementation 'me.relex:circleindicator:1.2.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
 }
 
 
