@@ -18,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void activitySelectorWithTimer() { //TODO: 2 sec for Splash
-        int DELAY = 2000;
+        int DELAY = 1000;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
