@@ -35,6 +35,6 @@ public class SplashActivity extends AppCompatActivity {
             OnBoardActivity.start(this); //TODO: for test time
             //MainActivity.start(this);
         }
-        finish();
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
     }
 }

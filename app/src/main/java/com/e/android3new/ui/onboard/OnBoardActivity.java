@@ -108,6 +108,7 @@ public class OnBoardActivity extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             MainActivity.start(OnBoardActivity.this);
+                            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                         }
                     });
                 } else {
