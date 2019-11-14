@@ -19,28 +19,14 @@ import retrofit2.Response;
 
 import static com.e.android3new.BuildConfig.WEATHER_KEY;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements DialogCallback {
+
+    private TestFragmemt testFragmemt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        RetrofitBuilder.getInstance().getCurrentWeather("Bishkek", WEATHER_KEY)
-                .enqueue(new Callback<CurrentWeatherEntity>() {
-                    @Override
-                    public void onResponse(Call<CurrentWeatherEntity> call, Response<CurrentWeatherEntity> response) {
-                        Log.d("asasdsd","bbbbb");
-                        CurrentWeatherEntity data = response.body();
-                        data.getWeather();
-                        data.getMain().getTemp();
-                    }
-
-                    @Override
-                    public void onFailure(Call<CurrentWeatherEntity> call, Throwable t) {
-                        Log.d("asasdsd","bbbbbaaa");
-                    }
-                });
     }
 
 //    private void initViewPager() {
@@ -50,5 +36,14 @@ public class MainActivity extends AppCompatActivity {
 
     public static void start(Context context) {
         context.startActivity(new Intent(context, MainActivity.class));
+    }
+
+    @Override
+    public void sendCity(String city) {
+        // при нажатии ОК в диалог окне сюда придет стринг
+        getSupportFragmentManager().beginTransaction()
+                .replace(-12121, testFragmemt = new TestFragmemt())
+                .commitAllowingStateLoss();
+        testFragmemt.searchCity(city);
     }
 }
